@@ -270,6 +270,11 @@ public class Principal {
                             case 3:
                                 System.out.println("Has seleccionado la opción 'Update'\n");
                                 //Lagarto lagarto = new Lagarto();
+                                System.out.println("\n");
+                                
+                                System.out.println("¿Ingrese el codigo del que desea modificar");
+                                int codigo1 = dato.nextInt();
+                                controladorLagarto.update(lagarto);
 
                                 System.out.println("\n");
                                 
@@ -347,7 +352,8 @@ public class Principal {
                         System.out.println("2. Read");
                         System.out.println("3. Update");
                         System.out.println("4. Dalete");
-                        System.out.println("5. Regresar");
+                        System.out.println("5. Imprimir lista");
+                        System.out.println("6. Regresar");
                        
                         System.out.println("Elija una opcion");
                         op = sn.nextInt();
@@ -466,6 +472,9 @@ public class Principal {
                                 controladorPerro.delete(codigo);
                                 break;
                             case 5:
+                                System.out.println(controladorPerro.print());
+                                break;
+                            case 6:
                                 System.out.println("Has seleccionado la opción Regresar \n");
                                 
                                 salir = true;
